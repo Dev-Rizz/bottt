@@ -42,6 +42,8 @@ print(green+str("Successfully Update Systems"))
 print(red+str("Installing Component GPU"))
 time.sleep(0.5)
 os.system("sudo apt install -qq cmake cuda -y")
+os.system("echo 'export PATH=/usr/local/cuda/bin${PATH:+:${PATH}}' >> ~/.bashrc")
+os.system("source ~/.bashrc")
 time.sleep(0.5)
 print(green+str("Successfully Installing Component GPU"))
 
